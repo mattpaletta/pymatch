@@ -1,4 +1,6 @@
 .mypy_cache/
 **/*.swp
 **/*.DS_Store
+**/*.pyc
 venv/
+**/*__pycache__
