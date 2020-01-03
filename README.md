@@ -5,7 +5,7 @@ Python Pattern Matching
 ## Instalation
 PyMatch has no external dependencies.
 To install pymatch:
-```
+```{bash}
 pip install git+://github.com/mattpaletta/pymatch.git
 ```
 
@@ -13,7 +13,7 @@ pip install git+://github.com/mattpaletta/pymatch.git
 You can see examples in `tests/`
 
 There are two main functions.  They allow for slightly different coding patterns.  Here is a basic example written both ways.
-```
+```{python}
 from pymatch import match, pattern
 
 # written with match
@@ -35,7 +35,7 @@ assert r1 == r2
 
 ## Matching
 ### Basic Values
-```
+```{python}
 from pymatch import match
 assert match([
 	(3, lambda a: 4),
@@ -44,7 +44,7 @@ assert match([
 ```
 
 ### Basic Types
-```
+```{python}
 from pymatch import match
 assert match([
 	(int, lambda i: i + 1),
@@ -55,7 +55,7 @@ assert match([
 ```
 
 ### Tuples (values, types, etc.)
-```
+```{python}
 from pymatch import pattern, etc
 m = pattern(
 	((1, 2, 3), lambda i, j, k: 9),
@@ -70,7 +70,7 @@ assert m( (1, 2, 4, 5) ) == 12
 assert m( (4, 5, 6) ) == 15
 ```
 ### Regex
-```
+```{python}
 from pymatch import match, Regex
 assert match([
 	(Regex("^abc[a-z]8"), lambda s: "goodbye")

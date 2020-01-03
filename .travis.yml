@@ -6,7 +6,7 @@ python:
 
 script:
   - pip install .
-  - python3 -m unittest discover -v -s test
+  - python3 -m unittest discover -v -s tests
 
 notifications:
   email:
